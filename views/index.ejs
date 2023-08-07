@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" />
+    <script>
+      const ROOM_ID = "<%= roomId %>";
+    </script>
+    <script
+      defer
+      src="https://unpkg.com/peerjs@1.3.2/dist/peerjs.min.js"
+    ></script>
+    <script src="/socket.io/socket.io.js" defer></script>
+    <script src="/connection.js" defer></script>
+    <title>Virtual Lab</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <section class="layout">
+      <div class="sidebar">
+        <header>Herramientas</header>
+        <button class="btn" id="btn-and">
+          <img src="/images/AND.png" alt="AND">
+        </button>
+        <button class="btn" id="btn-or">
+          <img src="/images/OR.png" alt="OR">
+        </button>
+        <button class="btn" id="btn-xor">
+          <img src="/images/XOR.png" alt="XOR">
+        </button>
+        <button class="btn" id="btn-not">
+          <img src="/images/NOT.png" alt="NOT">
+        </button>
+        <button class="btn" id="btn-switch">
+          <img src="/images/SwitchOFF.png" alt="Switch">
+        </button>
+        <button class="btn" id="btn-led">
+          <img src="/images/LEDOff.png" alt="LED">
+        </button>
+        <button class="btn" id="btn-wire">
+          <img src="/images/Wire.png" alt="Wire">
+        </button>
+      </div>
+      <div class="body">
+        <canvas id="myBoard"></canvas>
+        <canvas id="myGrid"></canvas>
+      </div>
+    </section>
+
+    <script src="/js/gates.js"></script>
+    <script src="/js/functions.js"></script>
+    <script src="/js/celdas.js"></script>
+    <script src="/board.js"></script>
+  </body>
+</html>
